@@ -59,6 +59,6 @@ const mapStateToProps = state => ({
 });
 
 export default connect(
-  mapStateToProps,
-  { addTodo, toggleTodo }
+  mapStateToProps, // adds properties from the redux store to the component's props object
+  { addTodo, toggleTodo } // adding action creators to the component's props object
 )(TodoList);

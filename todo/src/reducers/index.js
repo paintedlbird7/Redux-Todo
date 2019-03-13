@@ -3,8 +3,10 @@ import { UPDATE_TITLE, ADD_TODO, TOGGLE_TODO } from '../actions';
 const initialState = {
   title: 'Todo List',
   todos: [
-    { name: 'Joshua', id: 34782356, dragonStatus: false },
-    { name: 'Ilya', id: 677802, dragonStatus: true }
+    { name: 'Walk the dog.', id: 34782356, dragonStatus: false },
+    { name: 'Feed the cat', id: 677802, dragonStatus: true }
+    // { name: 'Hector', bestFriend: false }
+
   ]
 };
 
@@ -37,7 +39,7 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         todos: state.todos.map(todo => {
-          if (todos.id === action.payload) {
+          if (todo.id === action.payload) {
             return {
               ...todo,
               dragonStatus: !todo.dragonStatus
